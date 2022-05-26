@@ -10,19 +10,19 @@ jobs:
       - node/install
       - checkout
       - run:
-          name: Front-End Install
-          command: |
-            npm run frontend:install
-      - run:
           name: Back-End Install
           command: |
             npm run backend:install
       - run:
-          name: Front-End Build
+          name: Front-End Install
           command: |
-            npm run frontend:build
+            npm run frontend:install
       - run:
           name: Back-End Build
           command: |
             npm run backend:build
+      - run:
+          name: Front-End Build
+          command: |
+            npm run frontend:build
   
