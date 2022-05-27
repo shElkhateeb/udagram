@@ -36,7 +36,7 @@ jobs:
       - run:
           name: Back-End Test
           command: |
-            npm run backend:install
+            npm run backend:test
   deploy:
     docker:
       - image: "cimg/base:stable"
