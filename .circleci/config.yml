@@ -34,9 +34,9 @@ jobs:
           node-version: '16.13'
       - checkout
       - run:
-          name: Back-End Test
+          name: Front-End Test
           command: |
-            npm run backend:test
+            npm run frontend:test
   deploy:
     docker:
       - image: "cimg/base:stable"
