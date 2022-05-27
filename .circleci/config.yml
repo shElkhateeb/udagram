@@ -50,10 +50,10 @@ jobs:
           command: |
             npm run frontend:build
 workflows:
-  build_test_deploy:
+  build-test-and-deploy:
     jobs:
       - build
-      - test
+      - test:
           requires:
             - build
       - deploy:
