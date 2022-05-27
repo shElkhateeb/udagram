@@ -5,11 +5,19 @@ orbs:
 jobs:
   build-and-test:
     docker:
-        - image: "cimg/base:stable"
+        - image: "cimg/node:16.13.1-browsers"
     steps:
       - node/install:
           node-version: '16.13'
       - checkout
+      - run: mkdir test-reports
+      - run:
+          name: Download Selenium
+          command: curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
+      - run:
+          name: Start Selenium
+          command: java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
+          background: true
       # install packages
       - run:
           name: Back-End Install
