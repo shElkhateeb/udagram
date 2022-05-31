@@ -28,6 +28,10 @@ jobs:
           name: Front-End Build
           command: |
             npm run frontend:build
+      - persist_to_workspace:
+          root: ~/project
+          paths:
+            - .
   deploy:
     docker:
       - image: "cimg/base:stable"
