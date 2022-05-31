@@ -4,12 +4,12 @@ orbs:
   aws-cli: circleci/aws-cli@1.3.1
 jobs:
   build:
-    docker:
-        - image: "cimg/base:stable"
+    executor: node/default
     steps:
-      - node/install:
-          node-version: '16.13'
       - checkout
+      - node/install-packages:
+          pkg-manager: npm
+          #node-version: '16.13'
       # install packages
       - run:
           name: Back-End Install
@@ -33,8 +33,7 @@ jobs:
           paths:
             - .
   deploy:
-    docker:
-      - image: "cimg/base:stable"
+    executor: aws-cli/default
     steps:
       - attach_workspace:
           at: ~/project
