@@ -8,7 +8,7 @@ jobs:
     steps:
       - checkout
       - node/install-packages:
-          pkg-mangager: npm
+          pkg-manager: npm
       # install packages
       - run:
           name: Back-End Install
@@ -35,7 +35,7 @@ jobs:
     executor: aws-cli/default
     steps:
       - attach_workspace:
-          at: ~/project
+          at: ~/udagram
       - node/install:
           node-version: '16.13'
       - aws-cli/setup
