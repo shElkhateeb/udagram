@@ -36,9 +36,8 @@ jobs:
     docker:
       - image: "cimg/base:stable"
     steps:
-      - node/install:
-          node-version: '16.13'
-      - checkout
+      - attach_workspace:
+          at: ~/project
       - aws-cli/setup
       - run:
           name: Front-End Deploy
