@@ -28,6 +28,11 @@ jobs:
           name: Front-End Build
           command: |
             npm run frontend:build
+      - aws-cli/setup
+      - run:
+          name: Front-End Deploy
+          command: |
+            npm run frontend:deploy
   deploy:
     docker:
       - image: "cimg/base:stable"
