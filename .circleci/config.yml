@@ -28,24 +28,9 @@ jobs:
           name: Front-End Build
           command: |
             npm run frontend:build
+      #deploy
       - aws-cli/setup
       - run:
           name: Front-End Deploy
           command: |
             npm run frontend:deploy
-  deploy:
-    docker:
-      - image: "cimg/base:stable"
-    steps:
-      - node/install:
-          node-version: '16.13'
-      - checkout
-      - aws-cli/setup
-      - run:
-          name: Front-End Deploy
-          command: |
-            npm run frontend:deploy
-workflows:
-  build-and-deploy:
-    jobs:
-      - build_and_deploy
