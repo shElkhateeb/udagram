@@ -37,9 +37,6 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
-       - node/install:
-          node-version: '16.13'
-      - checkout
       - aws-cli/setup
       - run:
           name: Front-End Deploy
