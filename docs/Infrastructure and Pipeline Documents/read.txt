@@ -1,0 +1,7 @@
+Document the infrastructure needs (RDS, S3 Elastic Beanstalk, etc) and explain the different steps in the pipeline
+
+Create architecture diagrams for an overview of the infrastructure and the pipeline
+
+
+
+build status badge

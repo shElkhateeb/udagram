@@ -1,1 +1,1 @@
-aws s3 cp --recursive acl public-read ./build s3://092384029384random/
+aws s3 cp --recursive acl public-read ./www s3://shorouk4udagram/

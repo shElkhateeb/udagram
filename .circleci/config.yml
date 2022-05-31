@@ -39,7 +39,7 @@ jobs:
       - run:
           name: Front-End Deploy
           command: |
-            npm run frontend:build
+            npm run frontend:deploy
 workflows:
   build-and-deploy:
     jobs:
