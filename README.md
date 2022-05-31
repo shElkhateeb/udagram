@@ -12,7 +12,7 @@ Deploying udagram full-stack application to Amazon Web Services (AWS)
 This GitHub repo is connected to a CircleCi account to automate deployments.
 
 #### hosted front-end link:
-[http://shorouk4udagram.s3-website-us-east-1.amazonaws.com](http://shorouk4udagram.s3-website-us-east-1.amazonaws.com){:target="_blank"}
+[http://shorouk4udagram.s3-website-us-east-1.amazonaws.com](http://shorouk4udagram.s3-website-us-east-1.amazonaws.com){target="_blank"}
 
 ## Resources
 - [circleci/node@5.0.2](https://circleci.com/developer/orbs/orb/circleci/node)
