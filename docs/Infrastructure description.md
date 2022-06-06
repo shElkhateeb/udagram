@@ -21,9 +21,9 @@ We used RDS to deploy the PostgreSQL database for the udagram app. First, we use
 - `Public access`, `Create new` VPC security group
 ![VPC security group](/docs/screenshots/RDS/RDS6.png)
 - Create a database named `udagram`
-![Additional configuration](/docs/screenshots/RDS/RDS9.png)
+![Additional configuration](/docs/screenshots/RDS/RDS7.png)
 - `create database`
-![Create database](/docs/screenshots/RDS/RDS6.png)
+![Create database](/docs/screenshots/RDS/RDS8.png)
 finally we change the value of `POSTGRES_HOST` environment variable to the endpoint value. As well as `DB_PORT`, `POSTGRES_PASSWORD`, `POSTGRES_USERNAME` and `POSTGRES_DB` if we used different values. 
-![Connectivity & security](/docs/screenshots/RDS/RDS7.png)
+![Connectivity & security](/docs/screenshots/RDS/RDS9.png)
 
