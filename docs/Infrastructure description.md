@@ -98,4 +98,12 @@ We now go to `objects` to upload the website contents and click `upload`.
 We go back to properties to find the URL `http://shorouk4udagram.s3-website-us-east-1.amazonaws.com`
 ![Bucket website endpoint](/docs/screenshots/S3/bucket_properties4.jpg)
 
+## Elastic Beanstalk
+To run our udagram-api on a server, we use the Elastic Beanstalk service. We deploy udagram-api according to the following steps.
+1. From cmd we run the `aws configure` command from the root. Then set `AWS Access Key ID`, `AWS Secret Access Key`, `Default region name`, and `Default output format`.
+2. Navigate to `udagram-api` in the terminal using the `cd udagram-api` command.
+3. Run `eb init` command` from there to create `.elasticbeanstalk/config.yml`.
+4. Run `eb create udagram-env` to create an environment.
+5. Use the environment by running the `eb use udagram-env` command.
+6. Finally, deploy the application using the `eb deploy` command.
 
