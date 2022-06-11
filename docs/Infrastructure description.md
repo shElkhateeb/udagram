@@ -98,6 +98,11 @@ We now go to `objects` to upload the website contents and click `upload`.
 We go back to properties to find the URL `http://shorouk4udagram.s3-website-us-east-1.amazonaws.com`
 ![Bucket website endpoint](/docs/screenshots/S3/bucket_properties4.jpg)
 
+In order to deploy the frontend using CircleCI, we had to `enable ACLs` to fix `(AccessControlListNotSupported) when calling the PutObject operation: The bucket does not allow ACLs` error.
+
+![Edit Object Ownershp](/docs/screenshots/S3/bucket_permissions4.jpg)
+
+
 ## Elastic Beanstalk
 To run our udagram-api on a server, we use the Elastic Beanstalk service. We deploy udagram-api according to the following steps.
 1. From cmd we run the `aws configure` command from the root. Then set `AWS Access Key ID`, `AWS Secret Access Key`, `Default region name`, and `Default output format`.
