@@ -24,3 +24,6 @@ The `deploy` job goes like the following:
 1. Attach workspace from the previous job.
 2. Setup AWS CLI.
 3. Deploy the frontend.
+
+## Author
+- Shorouk Elkhateeb
