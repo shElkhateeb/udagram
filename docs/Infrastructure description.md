@@ -112,3 +112,5 @@ To run our udagram-api on a server, we use the Elastic Beanstalk service. We dep
 5. Use the environment by running the `eb use udagram-env` command.
 6. Finally, deploy the application using the `eb deploy` command.
 
+## Resources
+- [For an Amazon S3 bucket deplolyent from Guithub how do I fix the error AccessControlListNotSupported: The bucket does not allow ACLs?](https://stackoverflow.com/questions/70333681/for-an-amazon-s3-bucket-deplolyent-from-guithub-how-do-i-fix-the-error-accesscon)
