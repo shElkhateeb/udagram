@@ -42,7 +42,7 @@ jobs:
       - node/install:
           node-version: '16.13'
       - aws-cli/setup
-      - eb/setup
+      - aws-elastic-beanstalk/setup
       - run:
           name: Back-End Deploy
           command: |
