@@ -110,7 +110,6 @@ In order to deploy the frontend using CircleCI, we had to `enable ACLs` to fix `
 
 ![Edit Object Ownershp](/docs/screenshots/S3/bucket_permissions4.png)
 
-
 ## Elastic Beanstalk
 To run our udagram-api on a server, we use the Elastic Beanstalk service. We deploy udagram-api according to the following steps.
 1. From cmd we run the `aws configure` command from the root. Then set `AWS Access Key ID`, `AWS Secret Access Key`, `Default region name`, and `Default output format`.
@@ -118,7 +117,9 @@ To run our udagram-api on a server, we use the Elastic Beanstalk service. We dep
 3. Run `eb init` command` from there to create `.elasticbeanstalk/config.yml`.
 4. Run `eb create udagram-env` to create an environment.
 5. Use the environment by running the `eb use udagram-env` command.
-6. Finally, deploy the application using the `eb deploy` command.
+6. Deploy the application using the `eb deploy` command.
+7. Set environment variables.
+![Set environment variables](/docs/screenshots/S3/edit environment variables.png)
 
 ## Resources
 - [For an Amazon S3 bucket deplolyent from Guithub how do I fix the error AccessControlListNotSupported: The bucket does not allow ACLs?](https://stackoverflow.com/questions/70333681/for-an-amazon-s3-bucket-deplolyent-from-guithub-how-do-i-fix-the-error-accesscon)

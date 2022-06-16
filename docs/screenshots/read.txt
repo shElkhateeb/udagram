@@ -1,3 +1,0 @@
-Include a screenshot of your last build in CircleCi (either include screenshots in the GitHub repo or upload into the Workspace)
-
-Include screenshots of the configuration page of your AWS services (either include screenshots in the GitHub repo or upload them into the Workspace)
