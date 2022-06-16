@@ -23,7 +23,14 @@ The `build` job consists of the following basic steps:
 The `deploy` job goes like the following:
 1. Attach workspace from the previous job.
 2. Setup AWS CLI.
-3. Deploy the frontend.
+3. Deploy the backend.
+4. Deploy the frontend.
+
+## Resources
+- [circleci/node@5.0.2](https://circleci.com/developer/orbs/orb/circleci/node)
+- [circleci/aws-cli@3.1.1](https://circleci.com/developer/orbs/orb/circleci/aws-cli)
+- [circleci/aws-elastic-beanstalk@2.0.1](https://circleci.com/developer/orbs/orb/circleci/aws-elastic-beanstalk)
+- [Sharing code checkout step between jobs](https://discuss.circleci.com/t/sharing-code-checkout-step-between-jobs/29918/2)
 
 ## Author
 - Shorouk Elkhateeb
