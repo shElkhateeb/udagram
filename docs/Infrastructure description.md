@@ -7,33 +7,41 @@ To deploy this application we used the following services from AWS:
 
 ## Relational Database Service (RDS)
 We used RDS to deploy the PostgreSQL database for the Udagram app. First, we use Amazon RDS to create the database in the following steps.
-- `create database`
+1. `create database`
  ![Create database](/docs/screenshots/RDS/RDS1.png)
 
-- `standard`
-- `postgreSql`
+2. `standard`, `postgreSql`
 ![Engin options](/docs/screenshots/RDS/RDS2.png)
 
-- `free tier`
+3. `free tier`
 ![Templates](/docs/screenshots/RDS/RDS3.png)
 
-- `database-1` database instance
+4. `database-1` database instance
 ![Settings](/docs/screenshots/RDS/RDS4.png)
 
-- `db-t3-micro`, uncheck `Enable storage autoscaling`
+5. `db-t2-micro`, uncheck `Enable storage autoscaling`
 ![Instance configuration, Storage](/docs/screenshots/RDS/RDS5.png)
 
-- `Public access`, `Create new` VPC security group
+6. `Public access`, `Create new` VPC security group
 ![VPC security group](/docs/screenshots/RDS/RDS6.png)
 
-- Create a database named `udagram`
-![Additional configuration](/docs/screenshots/RDS/RDS9.png)
+7. Create a database named `udagram`
+![Additional configuration](/docs/screenshots/RDS/RDS7.png)
 
-- `create database`
-![Create database](/docs/screenshots/RDS/RDS6.png)
+8. `create database`
+![Create database](/docs/screenshots/RDS/RDS8.png)
 
-Finally, we change the value of the `POSTGRES_HOST` environment variable to the endpoint value. As well as `DB_PORT`, `POSTGRES_PASSWORD`, `POSTGRES_USERNAME` and `POSTGRES_DB` if we used different values. 
-![Connectivity & security](/docs/screenshots/RDS/RDS7.png)
+9. We change the value of the `POSTGRES_HOST` environment variable to the endpoint value. As well as `DB_PORT`, `POSTGRES_PASSWORD`, `POSTGRES_USERNAME` and `POSTGRES_DB` if we used different values. 
+![Connectivity & security](/docs/screenshots/RDS/RDS9.png)
+
+10. Click on `udagram-security` security group
+![Connectivity & security](/docs/screenshots/RDS/RDS10.png)
+
+11. `Inbound rules`, `Edit inbound rules`
+![Security group](/docs/screenshots/RDS/RDS11.png)
+
+12. `All traffic`, `Anywhere IPv4`
+![Edit inbound rules](/docs/screenshots/RDS/RDS12.png)
 
 ## S3
 We used S3 to deploy the frontend for the Udagram app. We start by creating a bucket to store files in the `www` folder where the frontend is built.
