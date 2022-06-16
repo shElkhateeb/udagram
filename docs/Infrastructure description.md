@@ -119,6 +119,7 @@ To run our udagram-api on a server, we use the Elastic Beanstalk service. We dep
 5. Use the environment by running the `eb use udagram-env` command.
 6. Deploy the application using the `eb deploy` command.
 7. Set environment variables.
+
 ![Set environment variables](/docs/screenshots/Elastic Beanstalk/edit environment variables.png)
 
 ## Resources
