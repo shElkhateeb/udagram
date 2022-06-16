@@ -54,10 +54,14 @@ jobs:
 workflows:
   build-and-deploy:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              only: [main, master]
       - deploy:
+          filters:
+            branches:
+              only: [main, master]
           requires:
             - build
-                filters:
-                  branches:
-                    only: [main, master]
+                
