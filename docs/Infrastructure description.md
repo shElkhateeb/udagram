@@ -46,31 +46,31 @@ We used RDS to deploy the PostgreSQL database for the Udagram app. First, we use
 ## S3
 We used S3 to deploy the frontend for the Udagram app. We start by creating a bucket to store files in the `www` folder where the frontend is built.
 
-- `Create bucket`
+1. `Create bucket`
 ![Create bucket](/docs/screenshots/S3/bucket_create1.png)
 
-- `Bucket name`
+2. `Bucket name`
 ![General configuration](/docs/screenshots/S3/bucket_create2.png)
 
-- uncheck `Block all public access`
+3. uncheck `Block all public access`
 ![Block Public Access settings for this bucket](/docs/screenshots/S3/bucket_create3.png)
 
-- `Create bucket`
+4. `Create bucket`
 ![Create bucket](/docs/screenshots/S3/bucket_create4.png)
 
 After creating a bucket we go to bucket `properties`.
-![Create bucket](/docs/screenshots/S3/bucket_properties1.jpg)
+![Create bucket](/docs/screenshots/S3/bucket_properties1.png)
 
-- Then we scroll down to Static website hosting and click edit.
-![Static website hosting](/docs/screenshots/S3/bucket_properties2.jpg)
+1. Then we scroll down to Static website hosting and click edit.
+![Static website hosting](/docs/screenshots/S3/bucket_properties2.png)
 
-- Then we enable static web hosting, choose the index document to be `index.html`, and click `Save changes`.
-![Save changes](/docs/screenshots/S3/bucket_properties3.jpg)
+2. Then we enable static web hosting, choose the index document to be `index.html`, and click `Save changes`.
+![Save changes](/docs/screenshots/S3/bucket_properties3.png)
 
-To make bucket accessible to the public we go to `permissions`. We scroll down to `Bucket policy` and click `Edit`.
-![Edit bucket policy](/docs/screenshots/S3/bucket_permissions1.jpg)
+3. To make bucket accessible to the public we go to `permissions`. We scroll down to `Bucket policy` and click `Edit`.
+![Edit bucket policy](/docs/screenshots/S3/bucket_permissions1.png)
 
-- Then paste the following bucket policy and `Save changes`.
+4. Then paste the following bucket policy and `Save changes`.
 ```
 {
 	"Version": "2012-10-17",
@@ -89,26 +89,26 @@ To make bucket accessible to the public we go to `permissions`. We scroll down t
 	]
 }
 ```
-![Create bucket](/docs/screenshots/S3/bucket_permissions2.jpg)
+![Bucket policy](/docs/screenshots/S3/bucket_permissions2.png)
 
 We now go to `objects` to upload the website contents and click `upload`.
-![Objects](/docs/screenshots/S3/bucket_upload1.jpg)
+![Objects](/docs/screenshots/S3/bucket_upload1.png)
 
-- We upload `www` folder
-![www](/docs/screenshots/S3/bucket_upload3.jpg)
+1. We upload `www` folder
+![www](/docs/screenshots/S3/bucket_upload2.png)
 
-- Uploading...
-![Uploading](/docs/screenshots/S3/bucket_upload4.jpg)
+2. Uploading...
+![Uploading](/docs/screenshots/S3/bucket_upload3.png)
 
-- After upload finishes click `Close`
-![Close](/docs/screenshots/S3/bucket_upload5.jpg)
+3. After upload finishes click `Close`
+![Close](/docs/screenshots/S3/bucket_upload4.png)
 
 We go back to properties to find the URL `http://shorouk4udagram.s3-website-us-east-1.amazonaws.com`
-![Bucket website endpoint](/docs/screenshots/S3/bucket_properties4.jpg)
+![Bucket website endpoint](/docs/screenshots/S3/bucket_properties4.png)
 
 In order to deploy the frontend using CircleCI, we had to `enable ACLs` to fix `(AccessControlListNotSupported) when calling the PutObject operation: The bucket does not allow ACLs` error.
 
-![Edit Object Ownershp](/docs/screenshots/S3/bucket_permissions4.jpg)
+![Edit Object Ownershp](/docs/screenshots/S3/bucket_permissions4.png)
 
 
 ## Elastic Beanstalk
